@@ -21,6 +21,15 @@
 
 ---
 
+### Google Drive on a Mac shouldn't be this painful
+- 🐢 **Uploads crawl:** a browser tab or sync client moves only a few files at a time, and your fast internet sits idle.
+- 💾 **Your disk fills up:** sync clients cache everything locally, so copy a 500 GB card into the Drive folder and your laptop fills up first.
+- 🗑 **Junk in your Drive:** `.DS_Store`, `._IMG_0042.CR3`, `.Spotlight-V100`… come along with every folder you drag in.
+- 🧩 **Downloads arrive as split zips:** big folders downloaded from the website get chopped into pieces.
+- 🖱 **File management in a browser tab:** no Quick Look, no real drag & drop, no folder sizes.
+
+**CloudFerry fixes all of it, and lets you use Google Drive the way you use Finder.** ⚡ [Run the live speed check](https://brendanc321.github.io/cloudferry-site/#speedcheck) to see what parallel transfers can do on your connection.
+
 **CloudFerry is a free, open-source Google Drive client for macOS that's built for speed.** It moves files to and from Google Drive with **up to 32 parallel transfers** and **multi-threaded downloads**, so it can **max out a gigabit (or faster) home connection**. There's no syncing, no local cache and no Terminal.
 
 On top of that you get:
@@ -171,6 +180,15 @@ Use a client that uploads many files in parallel and doesn't copy files into a l
 
 **How do I download an entire Google Drive folder quickly, without it being zipped?**
 Open the folder in CloudFerry's **Browse** tab and drag it to Finder, or right-click → *Download to…*. Files download in parallel, large files use multiple streams, and there's no zip-and-wait step.
+
+**How do I stop `.DS_Store` and `._` files from uploading to Google Drive?**
+CloudFerry filters system junk automatically: `.DS_Store`, `._*` (AppleDouble), `.Spotlight-V100`, `.fseventsd`, `.Trashes`, `.TemporaryItems`, `Thumbs.db`, `desktop.ini` and more. You can turn it off in Settings.
+
+**How fast can I upload to Google Drive with my internet?**
+Try the [live speed check](https://brendanc321.github.io/cloudferry-site/#speedcheck). It measures one connection against many in parallel, recommends a CloudFerry preset, and estimates how long a card or a terabyte will take. Inside the app, **Speed test** measures your real speed to your own Drive.
+
+**Does it mount Google Drive as a disk?**
+Not as a mounted volume. CloudFerry gives you a Finder-style window for Google Drive, with thumbnails, Quick Look and drag & drop, without syncing or caching anything on your disk.
 
 **Is there a Google Drive app for Mac that doesn't sync?**
 Yes. CloudFerry doesn't mirror or cache your Drive. You browse it like Finder and only transfer what you choose, so it uses no extra disk space.
