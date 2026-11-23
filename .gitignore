@@ -1,0 +1,8 @@
+.build/
+build/
+Vendor/
+*.dmg
+*.sha256
+.DS_Store
+._*
+.swiftpm/
