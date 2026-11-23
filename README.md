@@ -21,12 +21,17 @@
 
 ---
 
-### Google Drive on a Mac shouldn't be this painful
-- 🐢 **Uploads crawl:** a browser tab or sync client moves only a few files at a time, and your fast internet sits idle.
-- 💾 **Your disk fills up:** sync clients cache everything locally, so copy a 500 GB card into the Drive folder and your laptop fills up first.
-- 🗑 **Junk in your Drive:** `.DS_Store`, `._IMG_0042.CR3`, `.Spotlight-V100`… come along with every folder you drag in.
-- 🧩 **Downloads arrive as split zips:** big folders downloaded from the website get chopped into pieces.
-- 🖱 **File management in a browser tab:** no Quick Look, no real drag & drop, no folder sizes.
+### Google Drive on a Mac shouldn't feel like this
+- 🐢 **"I pay for 1–2 Gbps. Why do my uploads crawl at a few hundred Mbps?"**
+  - The Google Drive website and app move only a handful of files at a time, and each file waits for its own start-up and confirmation, so your fast line and fast Mac sit idle between files.
+  - With **thousands of photos** it's worse: the speed graph bounces up and down like a heartbeat.
+  - CloudFerry keeps dozens of files in flight and checks them in parallel, so your connection stays full.
+- 💾 **"Google Drive for desktop is eating my Mac."**
+  - The official app keeps a local cache that often shows up as tens or hundreds of GB of mysterious **"System Data"** in Storage settings.
+  - CloudFerry stores nothing: no sync, no cache, files stream straight to and from the cloud.
+- 🧩 **"My download came as 12 zip files."** Drag the folder to Finder instead. It arrives as a folder, at full speed.
+- 🖱 **"Managing files in a browser tab is painful."** You get a Finder-style window with thumbnails, Quick Look and drag & drop.
+- 😵 **"Did everything actually upload?"** Every file is verified, with a "safe to format" badge.
 
 **CloudFerry fixes all of it, and lets you use Google Drive the way you use Finder.** ⚡ [Run the live speed check](https://brendanc321.github.io/cloudferry-site/#speedcheck) to see what parallel transfers can do on your connection.
 
@@ -183,6 +188,12 @@ Open the folder in CloudFerry's **Browse** tab and drag it to Finder, or right-c
 
 **How do I stop `.DS_Store` and `._` files from uploading to Google Drive?**
 CloudFerry filters system junk automatically: `.DS_Store`, `._*` (AppleDouble), `.Spotlight-V100`, `.fseventsd`, `.Trashes`, `.TemporaryItems`, `Thumbs.db`, `desktop.ini` and more. You can turn it off in Settings.
+
+**Why is my Google Drive upload only a few hundred Mbps when I have gigabit internet?**
+The Google Drive website and desktop app move only a few files at a time, and each file waits for its own start-up and confirmation, so a fast line sits idle between files. This is especially bad with thousands of small photos, where the speed bounces up and down. CloudFerry keeps dozens of files in flight and checks them in parallel, so the connection stays full.
+
+**Why does Google Drive for desktop take up so much "System Data" on my Mac?**
+The official app keeps a local cache of your Drive, which macOS often counts as "System Data" in Storage settings. CloudFerry doesn't sync or cache anything: files stream directly between your disk and Google Drive.
 
 **How fast can I upload to Google Drive with my internet?**
 Try the [live speed check](https://brendanc321.github.io/cloudferry-site/#speedcheck). It measures one connection against many in parallel, recommends a CloudFerry preset, and estimates how long a card or a terabyte will take. Inside the app, **Speed test** measures your real speed to your own Drive.
